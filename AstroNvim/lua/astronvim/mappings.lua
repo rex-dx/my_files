@@ -16,6 +16,12 @@ local sections = {
   t = { desc = " Terminal" },
 }
 if not vim.g.icons_enabled then vim.tbl_map(function(opts) opts.desc = opts.desc:gsub("^.* ", "") end, sections) end
+-- Insert --
+-- navigate within insert mode
+maps.i["<C-h>"] = { "<Left>", desc="move left" }
+maps.i["<C-l>"] = { "<Right>", desc="move right" }
+maps.i["<C-j>"] = { "<Down>", desc="move down" }
+mps.i["<C-k>"] = { "<Up>", desc="move up" }
 
 -- Normal --
 -- Standard Operations
